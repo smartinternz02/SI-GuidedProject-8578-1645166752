@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Checkout example for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="static/form-validation.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-light">
+   <header>
+      
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            
+			<strong>SmartBridge</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="py-5 text-center">
+          <h2>Co2 Emission By Country Predictor</h2>
+        </div>
+
+      <div class="row">
+        
+        <div class="col-md-8 order-md-1">
+          
+          <form action="/predict" method="POST" class="needs-validation" novalidate>
+                        
+              
+
+            <div class="row">
+              <div class="col-md-5 mb-3">
+                <label for="country">Country Name</label>
+                <select class="custom-select d-block w-100" id="CountryName" name="CountryName" required>
+                  
+				<option>Select the CountryName</option>
+				<option value="0">Arab World</option>
+				<option value="1">Barbados</option>
+				<option value="2">India</option>
+				<option value="3">Singapore</option>
+				<option value="4">United States</option>  
+
+                </select>
+               </div>
+              <div class="col-md-4 mb-3">
+                 <label for="country">Country Code</label>
+                <select class="custom-select d-block w-100" id="CountryCode" name="CountryCode" required>
+                  
+					<option value="">Select the Country Code</option>
+					<option value="0">ARB</option>
+					<option value="1">BRB</option>
+					<option value="2">IND</option>
+					<option value="3">SGP</option>
+					<option value="4">USA</option> 
+                </select>
+               
+              </div>
+			   <div class="col-md-3 mb-3">
+                 <label for="country">Indicator Name</label>
+                <select class="custom-select d-block w-100" id="IndicatorName" name="IndicatorName" required>
+                  
+				
+					<option value="">Select the Indicator Name</option>
+					<option value="124">CO2 emissions (kg per 2005 US$ of GDP)</option>
+					<option value="127">CO2 emissions (kt)</option>
+					<option value="128">CO2 emissions (metric tons per capita)</option>
+					<option value="130">CO2 emissions from gaseous fuel consumption (% of total)</option>
+					<option value="131">CO2 emissions from gaseous fuel consumption (kt)</option>
+					<option value="132">CO2 emissions from liquid fuel consumption (% of total)</option>
+					<option value="133">CO2 emissions from liquid fuel consumption (kt)</option>
+					<option value="137">CO2 emissions from solid fuel consumption (% of total)</option>
+					<option value="603">Inflation, consumer prices (annual %)</option>
+					<option value="745">Merchandise trade (% of GDP)</option>
+
+                </select>
+               
+              </div>
+              
+            </div>
+            
+           
+
+            
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="cc-name">Year</label>
+				<input class="form-control" type="text" id="Year" name="Year" placeholder="Enter the Year from 1960-2015 " required>
+                
+                <small class="text-muted">Enter Year from 1960-2015</small>
+                
+              </div>
+              
+            </div>
+           
+            <hr class="mb-4">
+			
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Predict</button>
+          </form>
+        </div>
+      </div>
+
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-5">&copy; 2020-2021 SmartBridge</p>
+        
+      </footer>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="static/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="static/js/vendor/popper.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/vendor/holder.min.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+	
+  </body>
+</html>
